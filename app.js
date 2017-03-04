@@ -7,9 +7,9 @@ var express       =     require('express'),
     fs            =     require('fs'),
     os            =     require('os')
     redisMod      =     require('redis'),
-    redisClient   =     redisMod.createClient(),
+    /*redisClient   =     redisMod.createClient(),*/
     cluster       =     require('cluster'),
-    redis         =     require('socket.io-redis');
+    /*redis         =     require('socket.io-redis');*/
 
 mongoose.connect(config.db);
 var db = mongoose.connection;
@@ -18,7 +18,7 @@ db.on('error', function () {
 });
 
 /* Redis Client Event Listeneres..  */
-redisClient
+/*redisClient
   .on('ready', function () {
     console.log(" REDIS ready ");
   })
@@ -27,7 +27,7 @@ redisClient
   })
   .on('end', function () {
     console.log('redis end listener -------------------')
-  });
+  });*/
 
 var sslConf = {
     /* SSL Keys Configuration goes here ---  */
@@ -95,7 +95,7 @@ if(cluster.isMaster){
 
   }
   var io = require('socket.io')(server);
-  io.adapter(redis({ host: config.host, port: config.redis }));
+  /*io.adapter(redis({ host: config.host, port: config.redis }));*/
   var socketIo    = require('./config/sockets')(io,cluster);
   module.exports = require('./config/express')(app, config);
 
