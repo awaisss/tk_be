@@ -13,7 +13,7 @@ var config = {
     env: 'development',
     io: 8090,
     redis: 6379,
-    host:  '127.0.0.1'
+    host:  'https://sleepy-escarpment-76607.herokuapp.com'
   },
 
   test: {
@@ -26,7 +26,7 @@ var config = {
     env:'test',
     io: 8090,
     redis: 6379,
-    host:  '127.0.0.1'
+    host:  'https://sleepy-escarpment-76607.herokuapp.com'
   },
 
   production: {
@@ -39,7 +39,7 @@ var config = {
     env: 'production',
     io: 8090,
     redis: 6379,
-    host:  '127.0.0.1'
+    host:  'https://sleepy-escarpment-76607.herokuapp.com'
   }
 };
 
