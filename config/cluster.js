@@ -35,12 +35,12 @@ module.exports = function(app, config,cluster,sslMode,redis){
 	    var http 		= require('http');
 	    var server 		= http.createServer(app).listen(config.port);
 	    console.log('express server listening on port  ' + config.port) 
-	    http.globalAgent.maxSockets = Infinity;
+	    /*http.globalAgent.maxSockets = Infinity;*/
 
 	  } else {
 	    var https 		= require('https');
 	    var server 		= https.createServer(sslConf ,app).listen(config.port);
-	    https.globalAgent.maxSockets = Infinity; 
+	    /*https.globalAgent.maxSockets = Infinity;*/ 
 
 
 	  }
