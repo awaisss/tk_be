@@ -24,7 +24,7 @@ var config = {
       name: 'tk_be'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/tk_test',
+    db: 'mongodb://awais:awais@ds035563.mlab.com:35563/tk_dev',
     env:'test',
     io: 8090,
     redis: 15776,
@@ -38,7 +38,7 @@ var config = {
       name: 'tk_be'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://localhost/tk_prod',
+    db: 'mongodb://awais:awais@ds035563.mlab.com:35563/tk_dev',
     env: 'production',
     io: 8090,
     redis: 15776,
