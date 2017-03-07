@@ -9,11 +9,13 @@ var config = {
       name: 'tk_be'
     },
     port: process.env.PORT || 3000,
+    /*db: 'mongodb://localhost:27017/tk_dev',*/
     db: 'mongodb://awais:awais@ds035563.mlab.com:35563/tk_dev',
     env: 'development',
     io: 8090,
-    redis: 6379,
-    host:  'https://sleepy-escarpment-76607.herokuapp.com'
+    redis: 15776,
+    host:  '127.0.0.1',
+    redisHost: 'pub-redis-15776.us-west-2-1.1.ec2.garantiadata.com'
   },
 
   test: {
@@ -22,11 +24,12 @@ var config = {
       name: 'tk_be'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://awais:awais@ds035563.mlab.com:35563/tk_dev',
+    db: 'mongodb://localhost/tk_test',
     env:'test',
     io: 8090,
-    redis: 6379,
-    host:  'https://sleepy-escarpment-76607.herokuapp.com'
+    redis: 15776,
+    host:  '127.0.0.1',
+    redisHost: 'pub-redis-15776.us-west-2-1.1.ec2.garantiadata.com'
   },
 
   production: {
@@ -35,11 +38,12 @@ var config = {
       name: 'tk_be'
     },
     port: process.env.PORT || 3000,
-    db: 'mongodb://awais:awais@ds035563.mlab.com:35563/tk_dev',
+    db: 'mongodb://localhost/tk_prod',
     env: 'production',
     io: 8090,
-    redis: 6379,
-    host:  'https://sleepy-escarpment-76607.herokuapp.com'
+    redis: 15776,
+    host:  '127.0.0.1',
+    redisHost: 'pub-redis-15776.us-west-2-1.1.ec2.garantiadata.com'
   }
 };
 

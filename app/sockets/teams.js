@@ -1,4 +1,4 @@
-var Teams = require('./../models/teams');
+var Teams = require('./../models/teamsModel');
 
 module.exports = function(io,socket){
 

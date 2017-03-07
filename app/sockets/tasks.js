@@ -1,4 +1,4 @@
-var Tasks  = require('./../models/tasks');
+var Tasks  = require('./../models/tasksModel');
 
 module.exports = function(){
 

@@ -1,17 +1,18 @@
 var express 		= 	require('express');
 var router  		= 	express.Router();
-var passport 		=	require('passport');
+var jwt 			=	require('jsonwebtoken');
 var api_root_url 	= 	'http://localhost:3000/';
+var config 			= 	require('./../../config/config');
 
 	/*  -----  API Controllers references start   -------    */
-var tasks 			= 	require('./../controllers/tasks');
-var teams 			= 	require('./../controllers/teams');
-var customers 		= 	require('./../controllers/customers');		 
+var tasks 			= 	require('./../controllers/taskController');
+var teams 			= 	require('./../controllers/teamController');
+var customers 		= 	require('./../controllers/customerController');		 
 	/*  -----  API Controllers references end   ---------  */
 	
 
 /* --- Require and Use All Middlewares/Auth-Mechanism --- */
-module.exports 		= 	require('./../middlewares/auth')(passport,router);
+//module.exports 		= 	require('./../middlewares/auth')(jwt,router);
 
 
 /*  --- APIs Endpoints for Tasks --- */
@@ -26,5 +27,12 @@ router.post('/admin/createTeam',teams.createNewTeam);
 router.get('/admin/customers',customers.getAllCustomers);
 router.post('/admin/createCustomer',customers.createNewCustomer)
 
-		/*  ---------  !!!!!  -------- */
+		/*  ---------  !!!!!  -------- */	
+		
+/* api url for chat page */
+router.get('/chat',function(req,res){
+	res.sendFile(config.root + '/app/views/chat.html');
+})			
+
+
 module.exports = router;
