@@ -45,7 +45,8 @@ module.exports = function(app, config,cluster,sslMode,redis){
 
 	  }
 	  var io = require('socket.io')(server);
-	  io.adapter(redis({ host: config.redisHost, port: config.redis }));
+	  /*io.adapter(redis({ host: config.redisHost, port: config.redis }));*/
+	  io.adapter(redis({ host: '35.166.136.116', port: 6379 }));
 	  var socketIo    	= require('./sockets')(io,cluster);
 	  module.exports 	= require('./express')(app, config);
 
