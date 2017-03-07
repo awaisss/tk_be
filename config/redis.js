@@ -4,9 +4,9 @@ module.exports  = function(redisClient){
 	  .on('ready', function () {
 	  	console.log('redis host ',redisClient.host)
 	    console.log(" REDIS ready ");
-	    redisClient.set("language","nodejs")
+	    /*redisClient.set("language","nodejs")
 	    redisClient.set("database","mongo")
-	    redisClient.set("server","linux")
+	    redisClient.set("server","linux")*/
 	  })
 	  .on('error', function (err) {
 	    console.log('redis error ------------')
