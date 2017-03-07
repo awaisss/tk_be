@@ -9,6 +9,7 @@ var express       	=     require('express'),
     redis         	=     require('socket.io-redis');
 
 /* Database Connection  */
+console.log('=======================================================================================================')
 mongoose.connect(config.db);
 var db = mongoose.connection;
 db.on('error', function () {
