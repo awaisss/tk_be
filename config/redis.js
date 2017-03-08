@@ -8,6 +8,9 @@ module.exports  = function(redisClient){
 	    redisClient.set("database","mongo")
 	    redisClient.set("server","linux")*/
 	  })
+	  .on('connect',function(){
+	  	console.log('client connected on to redis server -----------------------------')
+	  })
 	  .on('error', function (err) {
 	    console.log('redis error ------------')
 	  })
