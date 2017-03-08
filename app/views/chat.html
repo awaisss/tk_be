@@ -22,10 +22,10 @@
     </form>
     <!-- <script src="/chatapp/socket.io-client/dist/socket.io.js"></script> -->
     <script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
-    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
-      //var socket = io.connect('https://localhost:3000')
-      var socket = io.connect('https://sleepy-escarpment-76607.herokuapp.com');
+      //var socket = io();
+      var socket = io.connect('https://localhost:3000')
       $('form').submit(function(){
         socket.emit('chat', $('#m').val());
         $('#m').val('');
