@@ -13,6 +13,8 @@ module.exports  = function(redisClient){
 	  })
 	  .on('error', function (err) {
 	    console.log('redis error ------------')
+	    console.log(err)
+	    console.log('+++++++++++++++++++++++++++++++++++++');
 	  })
 	  .on('end', function () {
 	    console.log('redis end listener -------------------')

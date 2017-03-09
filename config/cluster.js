@@ -11,9 +11,9 @@ module.exports = function(app, config,cluster,sslMode,redis){
 	  // Create the worker processes here ---
 	  console.log('****  Running on master  ****');
 	  var workCounts  = os.cpus().length;
-	  console.log('cluster count ===>>> ' + workCounts);
+	  console.log('cluster count ========================>>>>>>>>>>>>>>>>> ' + workCounts);
 
-	  for(var index = 0;index < workCounts; index++ ){
+	  for(var index = 0;index < 2; index++ ){
 	    cluster.fork();
 	  }
 	  Object.keys(cluster.workers).forEach(function(id) {
