@@ -9,7 +9,7 @@ module.exports  = function(redisClient){
 	    redisClient.set("server","linux")*/
 	  })
 	  .on('connect',function(){
-	  	console.log('client connected on to redis server -----------------------------')
+	  	console.log('client connected to redis server -----------------------------')
 	  })
 	  .on('error', function (err) {
 	    console.log('redis error ------------')
