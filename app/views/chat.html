@@ -23,7 +23,7 @@
     <script type="text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
-      var socket = io.connect('https://127.0.0.1:3000')
+      var socket = io.connect('http://sleepy-escarpment-76607.herokuapp.com')
       //var socket = io.connect('https://sleepy-escarpment-76607.herokuapp.com');
       $('form').submit(function(){
         socket.emit('chat', $('#m').val());
