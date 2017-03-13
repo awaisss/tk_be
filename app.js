@@ -1,4 +1,4 @@
-var sslMode       	=     false; 
+var sslMode       	=     true; 
 var express       	=     require('express'),
     config        	=     require('./config/config'),
     redisMod      	=     require('redis'),

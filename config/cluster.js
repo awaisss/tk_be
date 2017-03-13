@@ -2,9 +2,9 @@ var os 		= require('os')
 var fs 		= require('fs');
 var sslConf = {
     /* SSL Keys Configuration goes here ---  */
-    /*key  : fs.readFileSync('./../ssl/'),
-    ca : fs.readFileSync('./../ssl/'),
-    cert : fs.readFileSync('./../ssl/')*/
+    key  : fs.readFileSync('./../ssl/key.pem'),
+    ca : fs.readFileSync('./../ssl/certificate.pem'),
+    cert : fs.readFileSync('./../ssl/csr.csr')
 };
 module.exports = function(app, config,cluster,sslMode,redis){
 	if(cluster.isMaster){
